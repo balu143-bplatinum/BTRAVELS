@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 
-app = Flask(BTRAVELS)
+app = Flask(__name__)
+
 
 # Database setup
 def init_db():
@@ -63,3 +64,4 @@ def admin():
 if __name__ == "__main__":
     init_db()
     app.run(debug=True)
+
